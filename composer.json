@@ -1,47 +1,42 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "nulledus/nulledus-ledger",
+    "description": "This is my package nulledus-ledger",
     "keywords": [
-        ":vendor_name",
+        "nulledus",
         "laravel",
-        ":package_slug"
+        "nulledus-ledger"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/nulledus/nulledus-ledger",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "nulledus",
+            "email": "nulleds@nulledus.cc",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.1",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^11.0||^12.0"
+        "illuminate/contracts": "^10.0||^11.0||^12.0"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
-        "nunomaduro/collision": "^8.8",
-        "larastan/larastan": "^3.0",
-        "orchestra/testbench": "^10.0.0||^9.0.0",
-        "pestphp/pest": "^4.0",
-        "pestphp/pest-plugin-arch": "^4.0",
-        "pestphp/pest-plugin-laravel": "^4.0",
-        "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "nunomaduro/collision": "^7.0||^8.0",
+        "orchestra/testbench": "^8.0||^9.0||^10.0",
+        "pestphp/pest": "^2.0||^3.0||^4.0",
+        "pestphp/pest-plugin-arch": "^2.0||^3.0||^4.0",
+        "pestphp/pest-plugin-laravel": "^2.0||^3.0||^4.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Nulledus\\NulledusLedger\\": "src/",
+            "Nulledus\\NulledusLedger\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Nulledus\\NulledusLedger\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Nulledus\\NulledusLedger\\NulledusLedgerServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "NulledusLedger": "Nulledus\\NulledusLedger\\Facades\\NulledusLedger"
             }
         }
     },
