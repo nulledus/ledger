@@ -2,9 +2,9 @@
 
 namespace Nulledus\NulledusLedger;
 
+use Nulledus\NulledusLedger\Commands\NulledusLedgerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Nulledus\NulledusLedger\Commands\NulledusLedgerCommand;
 
 class NulledusLedgerServiceProvider extends PackageServiceProvider
 {
