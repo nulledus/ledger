@@ -1,12 +1,12 @@
 {
-    "name": "nulledus/nulledus-ledger",
-    "description": "This is my package nulledus-ledger",
+    "name": "nulledus/ledger",
+    "description": "This is my package ledger",
     "keywords": [
         "nulledus",
         "laravel",
-        "nulledus-ledger"
+        "ledger"
     ],
-    "homepage": "https://github.com/nulledus/nulledus-ledger",
+    "homepage": "https://github.com/nulledus/ledger",
     "license": "MIT",
     "authors": [
         {
