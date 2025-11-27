@@ -10,10 +10,10 @@ class NulledusLedger
     public function greet(?string $name = null): string
     {
         if ($name) {
-            return "Hello, {$name}! Welcome to Nulledus Ledger.";
+            return "Hello, {$name}! Welcome to Ledger.";
         }
 
-        return 'Hello! Welcome to Nulledus Ledger.';
+        return 'Hello! Welcome to Ledger.';
     }
 
     /**

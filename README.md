@@ -78,8 +78,14 @@ public function index(NulledusLedger $ledger)
 # Start containers
 docker-compose up -d --build
 
+# Wait installation, check:
+docker-compose logs app
+
 # Install dependencies
 docker-compose exec app composer install
+
+# Or update
+docker-compose exec app composer update
 
 # Run tests
 docker-compose exec app composer test
@@ -110,10 +116,10 @@ Before publishing a new version:
 
 ```bash
 # Run tests to ensure everything works
-composer test
+docker-compose exec app composer test
 
 # Format code
-composer format
+docker-compose exec app composer format
 
 # Commit all changes
 git add .
