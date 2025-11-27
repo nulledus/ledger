@@ -1,4 +1,4 @@
-FROM php:8.4-fpm
+FROM php:8.1-fpm
 
 # Get latest Composer from official composer image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer

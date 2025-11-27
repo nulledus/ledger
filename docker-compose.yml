@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  # PHP service (updated to PHP 8.4)
+  # PHP service (updated to PHP 8.1)
   app:
     build:
       context: .
