@@ -102,6 +102,109 @@ composer test
 composer format
 ```
 
+## Publishing a New Version
+
+### 1. Prepare the Release
+
+Before publishing a new version:
+
+```bash
+# Run tests to ensure everything works
+composer test
+
+# Format code
+composer format
+
+# Commit all changes
+git add .
+git commit -m "Prepare release v1.0.0"
+git push origin main
+```
+
+### 2. Create a Git Tag
+
+Use semantic versioning (e.g., `v1.0.0`, `v1.2.3`):
+
+```bash
+# Create an annotated tag
+git tag -a v1.0.0 -m "Release version 1.0.0"
+
+# Push the tag to GitHub
+git push origin v1.0.0
+```
+
+### 3. Create a GitHub Release (Optional but Recommended)
+
+1. Go to your repository on GitHub
+2. Click on "Releases" → "Create a new release"
+3. Select the tag you just created
+4. Add release notes describing changes
+5. Publish the release
+
+### 4. Publishing to Packagist (Optional)
+
+To make your package publicly available via Composer:
+
+1. Go to [Packagist.org](https://packagist.org/) and sign in
+2. Click "Submit" and enter your GitHub repository URL
+3. Packagist will automatically sync new versions from your GitHub tags
+4. Set up the GitHub Service Hook for automatic updates
+
+## Updating the Package in Your App
+
+### For Tagged Versions
+
+Once you've published a tagged version, update your Laravel app:
+
+```bash
+# Update to the latest version
+composer update nulledus/ledger
+
+# Or update to a specific version
+composer require nulledus/ledger:^1.0
+
+# Or update to an exact version
+composer require nulledus/ledger:1.0.0
+```
+
+### For Development Branch (dev-main)
+
+If you're still using `dev-main`:
+
+```bash
+# Update to latest from main branch
+composer update nulledus/ledger
+
+# Force update (clears cache)
+composer update nulledus/ledger --no-cache
+```
+
+### Checking Current Version
+
+```bash
+# Show current installed version
+composer show nulledus/ledger
+```
+
+### Version Constraints in composer.json
+
+You can specify version constraints in your app's `composer.json`:
+
+```json
+{
+    "require": {
+        "nulledus/ledger": "^1.0"
+    }
+}
+```
+
+Common version constraints:
+- `^1.0` - Compatible with version 1.0 and above (but below 2.0)
+- `~1.2` - Compatible with version 1.2 and above (but below 1.3)
+- `1.0.*` - Any version in the 1.0.x series
+- `>=1.0` - Version 1.0 or higher
+- `dev-main` - Latest commit from main branch (not recommended for production)
+
 ## License
 
 MIT License. See [LICENSE.md](LICENSE.md).
