@@ -4,7 +4,7 @@ FROM php:8.1-fpm
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Install only essential dependencies for Laravel package development
-#RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
 #    libzip-dev \
 #    unzip \
 #    && apt-get clean \
