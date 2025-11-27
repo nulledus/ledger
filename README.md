@@ -9,8 +9,30 @@ Laravel package for ledger management.
 
 ## Installation
 
+Since this package is not yet published on Packagist, you need to add the GitHub repository to your Laravel project's `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "name": "ledger",
+            "type": "vcs",
+            "url": "https://github.com/nulledus/ledger"
+        }
+    ]
+}
+```
+
+If the package is private run:
+
 ```bash
-composer require nulledus/nulledus-ledger
+composer config --global --auth github-oauth.github.com YOUR_GITHUB_TOKEN
+```
+
+Then install the package:
+
+```bash
+composer require nulledus/ledger:dev-main
 ```
 
 Publish config (optional):
