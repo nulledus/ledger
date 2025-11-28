@@ -17,4 +17,3 @@ class LedgerCommand extends Command
         return self::SUCCESS;
     }
 }
-

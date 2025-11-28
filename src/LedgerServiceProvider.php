@@ -23,4 +23,3 @@ class LedgerServiceProvider extends PackageServiceProvider
             ->hasCommand(LedgerCommand::class);
     }
 }
-

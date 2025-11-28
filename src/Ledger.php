@@ -28,4 +28,3 @@ class Ledger
         return $a + $b;
     }
 }
-
