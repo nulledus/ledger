@@ -1,5 +1,5 @@
 {
-    "name": "finteca/ledger",
+    "name": "nulledus/ledger",
     "description": "This is my package ledger",
     "keywords": [
         "finteca",
@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Finteca",
-            "email": "nulleds@nulledus.cc",
+            "email": "finteca@finteca.cc",
             "role": "Developer"
         }
     ],
