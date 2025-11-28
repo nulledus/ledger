@@ -16,7 +16,7 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Nulledus Test Suite">
+        <testsuite name="Finteca Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

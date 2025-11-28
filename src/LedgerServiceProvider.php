@@ -1,12 +1,12 @@
 <?php
 
-namespace Nulledus\NulledusLedger;
+namespace Finteca\Ledger;
 
-use Nulledus\NulledusLedger\Commands\NulledusLedgerCommand;
+use Finteca\Ledger\Commands\LedgerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class NulledusLedgerServiceProvider extends PackageServiceProvider
+class LedgerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,11 @@ class NulledusLedgerServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('nulledus-ledger')
+            ->name('ledger')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_nulledus_ledger_table')
-            ->hasCommand(NulledusLedgerCommand::class);
+            ->hasMigration('create_finteca_ledger_table')
+            ->hasCommand(LedgerCommand::class);
     }
 }
+

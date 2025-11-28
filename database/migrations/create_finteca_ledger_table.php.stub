@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('nulledus_ledger_table', function (Blueprint $table) {
+        Schema::create('finteca_ledger_table', function (Blueprint $table) {
             $table->id();
 
             // add fields
@@ -17,3 +17,4 @@ return new class extends Migration
         });
     }
 };
+

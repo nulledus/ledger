@@ -1,9 +1,9 @@
 <?php
 
-namespace Nulledus\NulledusLedger\Tests;
+namespace Finteca\Ledger\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Nulledus\NulledusLedger\NulledusLedgerServiceProvider;
+use Finteca\Ledger\LedgerServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Nulledus\\NulledusLedger\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Finteca\\Ledger\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            NulledusLedgerServiceProvider::class,
+            LedgerServiceProvider::class,
         ];
     }
 

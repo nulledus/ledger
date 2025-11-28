@@ -1,6 +1,6 @@
 <?php
 
-namespace Nulledus\NulledusLedger\Database\Factories;
+namespace Finteca\Ledger\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

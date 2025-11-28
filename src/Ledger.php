@@ -1,8 +1,8 @@
 <?php
 
-namespace Nulledus\NulledusLedger;
+namespace Finteca\Ledger;
 
-class NulledusLedger
+class Ledger
 {
     /**
      * Generate a greeting message
@@ -28,3 +28,4 @@ class NulledusLedger
         return $a + $b;
     }
 }
+

@@ -1,4 +1,4 @@
-# Nulledus Ledger
+# Finteca Ledger
 
 Laravel package for ledger management.
 
@@ -32,39 +32,39 @@ composer config --global --auth github-oauth.github.com YOUR_GITHUB_TOKEN
 Then install the package:
 
 ```bash
-composer require nulledus/ledger:dev-main
+composer require finteca/ledger:dev-main
 ```
 
 Publish config (optional):
 ```bash
-php artisan vendor:publish --tag="nulledus-ledger-config"
+php artisan vendor:publish --tag="ledger-config"
 ```
 
 Publish migrations (optional):
 ```bash
-php artisan vendor:publish --tag="nulledus-ledger-migrations"
+php artisan vendor:publish --tag="ledger-migrations"
 php artisan migrate
 ```
 
 ## Usage
 
 ```php
-use Nulledus\NulledusLedger\Facades\NulledusLedger;
+use Finteca\Ledger\Facades\Ledger;
 
 // Greet
-NulledusLedger::greet('John');
-// Returns: "Hello, John! Welcome to Nulledus Ledger."
+Ledger::greet('John');
+// Returns: "Hello, John! Welcome!!!"
 
 // Add numbers
-NulledusLedger::add(10, 5);
+Ledger::add(10, 5);
 // Returns: 15
 ```
 
 Or use dependency injection:
 ```php
-use Nulledus\NulledusLedger\NulledusLedger;
+use Finteca\Ledger\Ledger;
 
-public function index(NulledusLedger $ledger)
+public function index(Ledger $ledger)
 {
     return $ledger->greet('User');
 }
@@ -164,13 +164,13 @@ Once you've published a tagged version, update your Laravel app:
 
 ```bash
 # Update to the latest version
-composer update nulledus/ledger
+composer update finteca/ledger
 
 # Or update to a specific version
-composer require nulledus/ledger:^1.0
+composer require finteca/ledger:^1.0
 
 # Or update to an exact version
-composer require nulledus/ledger:1.0.0
+composer require finteca/ledger:1.0.0
 ```
 
 ### For Development Branch (dev-main)
@@ -179,17 +179,17 @@ If you're still using `dev-main`:
 
 ```bash
 # Update to latest from main branch
-composer update nulledus/ledger
+composer update finteca/ledger
 
 # Force update (clears cache)
-composer update nulledus/ledger --no-cache
+composer update finteca/ledger --no-cache
 ```
 
 ### Checking Current Version
 
 ```bash
 # Show current installed version
-composer show nulledus/ledger
+composer show finteca/ledger
 ```
 
 ### Version Constraints in composer.json
@@ -199,7 +199,7 @@ You can specify version constraints in your app's `composer.json`:
 ```json
 {
     "require": {
-        "nulledus/ledger": "^1.0"
+        "finteca/ledger": "^1.0"
     }
 }
 ```

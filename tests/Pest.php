@@ -1,5 +1,5 @@
 <?php
 
-use Nulledus\NulledusLedger\Tests\TestCase;
+use Finteca\Ledger\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

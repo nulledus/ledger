@@ -1,12 +1,12 @@
 <?php
 
-namespace Nulledus\NulledusLedger\Commands;
+namespace Finteca\Ledger\Commands;
 
 use Illuminate\Console\Command;
 
-class NulledusLedgerCommand extends Command
+class LedgerCommand extends Command
 {
-    public $signature = 'nulledus-ledger';
+    public $signature = 'ledger';
 
     public $description = 'My command';
 
@@ -17,3 +17,4 @@ class NulledusLedgerCommand extends Command
         return self::SUCCESS;
     }
 }
+

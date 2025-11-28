@@ -1,8 +1,8 @@
 {
-    "name": "nulledus/ledger",
+    "name": "finteca/ledger",
     "description": "This is my package ledger",
     "keywords": [
-        "nulledus",
+        "finteca",
         "laravel",
         "ledger"
     ],
@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "nulledus",
+            "name": "Finteca",
             "email": "nulleds@nulledus.cc",
             "role": "Developer"
         }
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Nulledus\\NulledusLedger\\": "src/",
-            "Nulledus\\NulledusLedger\\Database\\Factories\\": "database/factories/"
+            "Finteca\\Ledger\\": "src/",
+            "Finteca\\Ledger\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nulledus\\NulledusLedger\\Tests\\": "tests/",
+            "Finteca\\Ledger\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -58,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Nulledus\\NulledusLedger\\NulledusLedgerServiceProvider"
+                "Finteca\\Ledger\\LedgerServiceProvider"
             ],
             "aliases": {
-                "NulledusLedger": "Nulledus\\NulledusLedger\\Facades\\NulledusLedger"
+                "Ledger": "Finteca\\Ledger\\Facades\\Ledger"
             }
         }
     },
