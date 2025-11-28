@@ -8,5 +8,3 @@ it('can show it is alive and working', function () {
 
     expect($test)->toBe('hello');
 });
-
-
