@@ -14,4 +14,3 @@ class Ledger extends Facade
         return \Finteca\Ledger\Ledger::class;
     }
 }
-
