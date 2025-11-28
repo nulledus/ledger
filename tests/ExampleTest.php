@@ -2,30 +2,11 @@
 
 use Finteca\Ledger\Ledger;
 
-it('can greet with a name', function () {
+it('can show it is alive and working', function () {
     $ledger = new Ledger;
-    $greeting = $ledger->greet('John');
+    $test = $ledger->test();
 
-    expect($greeting)->toBe('Hello, John! Welcome!!!');
+    expect($test)->toBe('hello');
 });
 
-it('can greet without a name', function () {
-    $ledger = new Ledger;
-    $greeting = $ledger->greet();
 
-    expect($greeting)->toBe('Hello! Welcome to Ledger.');
-});
-
-it('can add two numbers', function () {
-    $ledger = new Ledger;
-    $result = $ledger->add(5, 3);
-
-    expect($result)->toBe(8);
-});
-
-it('can add decimals', function () {
-    $ledger = new Ledger;
-    $result = $ledger->add(2.5, 3.7);
-
-    expect($result)->toBe(6.2);
-});

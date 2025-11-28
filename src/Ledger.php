@@ -4,27 +4,8 @@ namespace Finteca\Ledger;
 
 class Ledger
 {
-    /**
-     * Generate a greeting message
-     */
-    public function greet(?string $name = null): string
+    public function test(): string
     {
-        if ($name) {
-            return "Hello, {$name}! Welcome!!!";
-        }
-
-        return 'Hello! Welcome to Ledger.';
-    }
-
-    /**
-     * Add two numbers together
-     *
-     * @param  int|float  $a
-     * @param  int|float  $b
-     * @return int|float
-     */
-    public function add($a, $b)
-    {
-        return $a + $b;
+        return 'hello';
     }
 }
